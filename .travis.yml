@@ -6,4 +6,4 @@ env:
   - secure: NFZIFSRboDd+ckVsWB/h/SO3VGeZ5RB+EU8IcslhU8yM7tSTD/13o6CW1CEBG+oc2gkpKOMEjwqxKy73bORX95IKtdorNUlocQA/nUhI1dZY7AubYfkjm24q/Yvzcle8QgF3Z++B9IEEHGIdG+KI+EFmYjWVWdStegrRmep9f/4hWZMLaf+s6lVWO7+H4EgZLHAqNA1pFmGJU7f6dw+XY2AbPj6Sig4Xg9DwpvbB0UItczfDA92g6ed9XWMaSAxXtvxuvBktZWwHq4SX/PkS8e6HAL+NDHztVy4zBxwsQWjcADM0YdPb2jCHwhlXSl0tKJH8IVKLkqQbTWxfVMwjAAw9lkro/zAoWm/6g4NVxnWTVQxT6OLEjUFWtvA/jMDJE3qDxkY+tkc0li6LOV+0NP8wUntYl1Hr8ple+Ssh8P4mO9Derq/jk5Y8iiFbrr5IeJoynux8E1JvoiR5rbpxaYDjUfyGZfdHm15Yfif8cNJwRUdmzwUEQsAHERFPrOe4xy9AMbhRU8plEaOhLgb5IpOP/Na3u0MbTC3XykYj6WAWJEODxj6kCiaix69dicM9WlTHEJgouGmuaX44f3tGwF4mz+obcvWNSL+vdzD4P1fxxogY8yvnZTBT7Mou7fU0FeNWvM+dosSW5Ny9GinosCtgsn0aILLzCGGvvi87KSE=
 script:
 - curl ${SITEMAP_TXT_URL} | head -n 200 > urls.txt
-- curl -H 'Content-Type:text/plain' --data-binary @urls.txt "${BAIDU_API}"
+- curl -H 'Content-Type:text/plain' --data-binary @urls.txt ${BAIDU_API}
