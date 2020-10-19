@@ -4,5 +4,5 @@ env:
   global:
   - REPO=4edd52ba13541f712c940946586a619db0ced21e
 script:
-- curl ${ secrets.sitemap_txt_url } | head -n 200 > urls.txt
-- curl -H 'Content-Type:text/plain' --data-binary @urls.txt "${ secrets.baidu_api }"
+- curl ${SITEMAP_TXT_URL} | head -n 200 > urls.txt
+- curl -H 'Content-Type:text/plain' --data-binary @urls.txt "${BAIDU_API}"
