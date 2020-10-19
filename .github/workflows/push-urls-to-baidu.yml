@@ -1,7 +1,7 @@
 name: push-urls-to-baidu
 on:
   schedule:
-    - cron: 30 4 * * *
+    - cron: 40 8 * * *
   watch:
     types: started
 jobs:
