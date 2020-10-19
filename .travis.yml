@@ -5,5 +5,6 @@ env:
   - REPO = SITEMAP_TXT
   - REPO = BAIDU_API
 script:
-- curl ${SITEMAP_TXT_URL} | head -n 200 > urls.txt
-- curl -H 'Content-Type:text/plain' --data-binary @urls.txt ${BAIDU_API}
+- mkdir /tmp
+- curl ${SITEMAP_TXT_URL} | head -n 200 > /tmp/url.txt
+- curl -H 'Content-Type:text/plain' --data-binary @/tmp/url.txt ${BAIDU_API}
