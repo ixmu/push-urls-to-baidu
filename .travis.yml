@@ -7,6 +7,7 @@ env:
 script:
 - mkdir sitemap
 - cd sitemap
+- echo ${SITEMAP_TXT}
 - curl ${SITEMAP_TXT_URL} | head -n 200 >url.txt
 - head -n 5 url.txt
 - curl -H 'Content-Type:text/plain' --data-binary @url.txt ${BAIDU_API}
