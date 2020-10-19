@@ -2,8 +2,8 @@ dist: xenial
 sudo: false
 env:
   global:
-  - REPO = SITEMAP_TXT
-  - REPO = BAIDU_API
+  - REPO=SITEMAP_TXT
+  - BAIDU_API="https://www.ixmu.net/sitemap.txt"
 script:
 - mkdir sitemap
 - cd sitemap
