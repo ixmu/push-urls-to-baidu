@@ -1,3 +1,5 @@
+dist: xenial
 script:
+- apt-get -y curl
 - curl https://www.ixmu.net/sitemap.txt | head -n 200 > urls.txt
 - curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=www.ixmu.net&token=准入密钥"
